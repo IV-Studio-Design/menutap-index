@@ -2,4 +2,5 @@
     <AppHeader />
     <HeroSection />
     <ContentSection />
+    <VideoSection />
 </template>
