@@ -3,4 +3,5 @@
     <HeroSection />
     <ContentSection />
     <VideoSection />
+    <SupportSection />
 </template>
