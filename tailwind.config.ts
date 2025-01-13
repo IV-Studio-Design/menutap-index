@@ -11,6 +11,9 @@ export default<Partial<Config>> {
             },
             fontFamily: {
                 raleway: ['Raleway', 'sans-serif']
+            },
+            boxShadow: {
+                'header': '0px 10px 15px rgba(0, 0, 0, .07)'
             }
         }
     }
