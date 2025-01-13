@@ -7,7 +7,7 @@
                 garantir que você aproveite ap máximo <br>
                 nossas soluções.
             </h1>
-            <NuxtLink class="block font-raleway bg-tapOrange font-bold text-white border-2 border-tapOrange rounded-md px-5 py-1.5">
+            <NuxtLink class="block font-raleway text-[15px] bg-tapOrange font-bold text-white border-2 border-tapOrange rounded-md px-5 py-1.5">
                 USAR VERSÃO GRÁTIS
             </NuxtLink>
 

@@ -14,10 +14,10 @@
                     Comece grátis!
                 </p>
                 <div class="flex gap-5 justify-start items-center pt-2">
-                    <NuxtLink class="block font-raleway font-bold text-tapOrange border-2 border-tapOrange rounded-md px-7 py-1.5">
+                    <NuxtLink class="block font-raleway text-[15px] font-bold text-tapOrange border-2 border-tapOrange rounded-md px-7 py-1.5">
                         VER PREÇOS
                     </NuxtLink>
-                    <NuxtLink class="block font-raleway bg-tapOrange font-bold text-white border-2 border-tapOrange rounded-md px-5 py-1.5">
+                    <NuxtLink class="block font-raleway text-[15px] bg-tapOrange font-bold text-white border-2 border-tapOrange rounded-md px-5 py-1.5">
                         USAR VERSÃO GRÁTIS
                     </NuxtLink>
                 </div>

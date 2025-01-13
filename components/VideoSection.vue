@@ -13,7 +13,7 @@
                     facilidade. Pronto para simplificar <br>
                     sua operação?
                 </p>
-                <a class="mt-2 block font-raleway bg-tapOrange font-bold text-white border-2 border-tapOrange rounded-md px-5 py-1.5">
+                <a class="mt-2 block font-raleway text-[15px] bg-tapOrange font-bold text-white border-2 border-tapOrange rounded-md px-5 py-1.5">
                     VIDEO DEMONSTRAÇÃO
                 </a>
             </div>
