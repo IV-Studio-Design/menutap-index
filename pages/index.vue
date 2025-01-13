@@ -4,4 +4,5 @@
     <ContentSection />
     <VideoSection />
     <SupportSection />
+    <AppFooter />
 </template>
