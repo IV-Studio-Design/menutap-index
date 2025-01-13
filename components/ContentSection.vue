@@ -1,5 +1,7 @@
 <template>
-    <div class="w-full flex justify-center items-center bg-tapOrangeLight bg-center bg-cover">
+    <div class="w-full bg-gradient-to-l to-tapOrangeLight/90
+     from-tapOrange/90 bg-center bg-cover">
+     <div class="w-full flex justify-center items-center bg-[url('@/assets/images/bg2.png')]  bg-cover bg-center">
         <section class="w-full max-w-5xl flex gap-8 justify-center items-center py-24">
             <div class="flex gap-10 justify-center items-center">
                 <div class="w-48 h-56 bg-white flex justify-center relative rounded-2xl">
@@ -59,5 +61,7 @@
                 </div>
             </div>
         </section>
+     </div>
+        
     </div>
 </template>
