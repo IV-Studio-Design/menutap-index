@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full flex justify-center items-center shadow-md">
+    <div class="w-full flex justify-center items-center shadow-header">
         <header class="w-full max-w-4xl h-full py-6 flex justify-between items-center">
             <img class="w-28" src="@/assets/images/menutap_logo.png" />
             <nav>
-                <ul class="flex gap-5 items-center">
+                <ul class="flex gap-7 items-center">
                     <li>
                         <NuxtLink class="app-header-link" exactActiveClass="font-bold" to="/">
                             INICIO
