@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full bg-gradient-to-l to-tapOrangeLight/90
-     from-tapOrange/90 bg-center bg-cover">
+    <div class="w-full bg-gradient-to-l to-tapOrangeLight
+     from-tapOrange bg-center bg-cover">
      <div class="w-full flex justify-center items-center bg-[url('@/assets/images/bg2.png')]  bg-cover bg-center">
         <section class="w-full max-w-5xl flex gap-8 justify-center items-center py-24">
             <div class="flex gap-10 justify-center items-center">
@@ -13,7 +13,7 @@
                             Ponto de venda <br>
                             e cardápio digital
                         </h3>
-                        <p class="font-raleway text-center leading-5">
+                        <p class="font-raleway text-center leading-5 text-sm">
                             Gerencie todos os <br>
                             aspectos do seu <br>
                             negócio em uma <br>
@@ -33,7 +33,7 @@
                             Seu Delivery, <br>
                             Sem Taxas.
                         </h3>
-                        <p class="font-raleway text-center leading-5">
+                        <p class="font-raleway text-center leading-5 text-sm">
                             Tenha <strong>seu próprio</strong> <br>
                             site delivery <strong>sem taxas.</strong> <br>
                             Comece grátis!
@@ -49,7 +49,7 @@
                            Interface Simples <br>
                            e Intuitiva
                         </h3>
-                        <p class="font-raleway text-center leading-5">
+                        <p class="font-raleway text-center leading-5 text-sm">
                             <strong>
                                 Sem configurações <br>
                                 complexas.
