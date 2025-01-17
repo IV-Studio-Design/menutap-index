@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Address {
+  id         Int     @id @default(autoincrement())
+  street     String
+  number     Boolean
+  district   String
+  city       String
+  state      String
+  postalCode String
+  complement String
+  shopId     Int     @unique
+  Shop       Shop    @relation(fields: [shopId], references: [id], onDelete: Cascade)
+}
+
+model Category {
+  id      Int       @id @default(autoincrement())
+  name    String
+  shopId  Int
+  Shop    Shop      @relation(fields: [shopId], references: [id], onDelete: Cascade)
+  Product Product[]
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  categoryId  Int
+  shopId      Int
+  visible     Boolean  @default(true)
+  image       String   @default("default_product_image.png")
+  Category    Category @relation(fields: [categoryId], references: [id])
+  Shop        Shop     @relation(fields: [shopId], references: [id], onDelete: Cascade)
+}
+
+model Shop {
+  id           Int        @id @default(autoincrement())
+  name         String
+  description  String?
+  url_name     String     @unique
+  brand_colors String?
+  waiting_time String
+  profile_pic  String
+  banner_pic   String
+  phone_number String
+  userId       Int
+  social_media String[]
+  to_consume   Boolean?
+  to_delivery  Boolean?
+  to_pickup    Boolean?
+  show_address Boolean?
+  addressId    Int
+  Address      Address?
+  Category     Category[]
+  Product      Product[]
+  User         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+  Shop      Shop[]
+}
