@@ -16,7 +16,7 @@ model Address {
   state      String
   postalCode String
   complement String
-  shopId     Int     @unique
+  shopId     Int
   Shop       Shop    @relation(fields: [shopId], references: [id], onDelete: Cascade)
 }
 
@@ -47,18 +47,17 @@ model Shop {
   description  String?
   url_name     String     @unique
   brand_colors String?
-  waiting_time String
-  profile_pic  String
-  banner_pic   String
-  phone_number String
+  waiting_time String?
+  profile_pic  String?
+  banner_pic   String?
+  phone_number String?
   userId       Int
   social_media String[]
-  to_consume   Boolean?
-  to_delivery  Boolean?
-  to_pickup    Boolean?
+  to_consume   Boolean?   @default(false)
+  to_delivery  Boolean?   @default(false)
+  to_pickup    Boolean?   @default(false)
   show_address Boolean?
-  addressId    Int
-  Address      Address?
+  Address      Address[]
   Category     Category[]
   Product      Product[]
   User         User       @relation(fields: [userId], references: [id], onDelete: Cascade)

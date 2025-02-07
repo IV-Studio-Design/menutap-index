@@ -5,8 +5,8 @@
         <section class="w-full max-w-5xl flex gap-8 justify-center items-center py-24">
             <div class="flex gap-10 justify-center items-center">
                 <div class="w-48 h-56 bg-white flex justify-center relative rounded-2xl">
-                    <div class="w-20 h-20 bg-tapOrangeLight absolute -top-10 flex justify-center items-center rounded-full">
-                        <IconsReader width="52" height="52" fill="#fff" />
+                    <div class="w-20 h-20 bg-white shadow-lg absolute -top-10 flex justify-center items-center rounded-full">
+                        <IconsReader width="44" height="44" fill="#F8A931" />
                     </div>
                     <div class="w-full h-full flex gap-2 flex-col justify-center items-center mt-3">
                         <h3 class="font-bold font-raleway text-tapOrange text-center text-lg leading-5">
