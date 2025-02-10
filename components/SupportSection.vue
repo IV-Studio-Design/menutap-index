@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full flex justify-center items-center">
+    <div class="w-full flex justify-center items-center px-2">
         <section class="w-full max-w-5xl flex gap-10 flex-col justify-center items-center py-14">
-            <h1 class="font-bold font-raleway text-4xl text-center">
-                Estamos aqui para ajudar! <br>
-                Oferecemos suporte dedicado para <br>
-                garantir que você aproveite ap máximo <br>
+            <h1 class="w-full max-w-2xl font-bold font-raleway text-2xl sm:text-3xl lg:text-4xl text-center">
+                Estamos aqui para ajudar!
+                Oferecemos suporte dedicado para
+                garantir que você aproveite aproveite o máximo
                 nossas soluções.
             </h1>
             <NuxtLink class="block font-raleway text-[15px] bg-tapOrange font-bold text-white border-2 border-tapOrange rounded-md px-5 py-1.5">
@@ -13,7 +13,7 @@
 
             <span class="w-24 h-1 bg-neutral-400 rounded-xl"></span>
 
-            <div class="flex gap-5 items-center">
+            <div class="flex flex-wrap gap-10 sm:gap-5 justify-center items-center">
                 <div class="w-80">
                     <IconsCog class="mx-auto mb-2" width="60" height="60" fill="#f5831e" />
                     <h3 class="font-bold font-raleway text-center text-lg">
