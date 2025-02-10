@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full bg-gradient-to-l to-[#ff9d46]
-     from-[#ff7f43]">
+    <div class="w-full bg-gradient-to-l to-[#ffb662]
+     from-[#f68f4b]">
      <div class="w-full flex justify-center items-center bg-[url('@/assets/images/bg2.png')] bg-cover bg-center">
         <section class="w-full max-w-5xl flex gap-8 justify-center items-center py-24">
             <div class="flex gap-10 justify-center items-center">
