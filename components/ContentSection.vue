@@ -1,7 +1,7 @@
 <template>
     <div class="w-full bg-gradient-to-l to-[#ffb662] from-[#f68f4b]">
         <div class="w-full flex justify-center items-center bg-[url('@/assets/images/office_bg.png')] bg-cover bg-center px-2">
-            <section class="w-full max-w-5xl flex flex-wrap gap-8 justify-center items-center pt-16 pb-14 sm:pt-24 sm:pb-24">
+            <section class="w-full max-w-5xl flex flex-wrap gap-8 justify-center items-center pt-16 pb-14 sm:pt-28 sm:pb-28">
                 <div class="flex flex-wrap gap-14 sm:gap-10 justify-center items-center">
                     <ContentCard>
                         <template #icon>
