@@ -1,0 +1,36 @@
+<script setup lang="ts">
+    const { productInfo } = defineProps(['productInfo']);
+    const { deleteProduct } = useProductStore();
+
+    const emit = defineEmits(['systemUpdate', 'close']);
+
+    const submit = async () => {
+        try {
+            const { message } = await $fetch('/api/products', {
+                method: 'DELETE',
+                body: {
+                    product_id: productInfo.id
+                }
+            });
+            emit('systemUpdate', {sucess: true, message});
+            deleteProduct(productInfo.id)
+            emit('close');
+        }catch(error: any){
+            const { message } = error.data;
+            emit('systemUpdate', {sucess: false, message});
+            emit('close');
+        }
+    }
+</script>
+
+<template>
+    <div class="w-96 bg-tapModalGray rounded-3xl shadow-md p-5">
+        <p class="font-raleway font-bold text-xl text-tapOrange">Deletar Produto?</p>
+        <p class="font-raleway text-sm my-5">Essa ação não pode ser desfeita.</p>
+
+        <div class="space-x-5">
+            <button @click="$emit('close')" class="bg-tapOrange font-raleway font-bold text-white px-5 py-1.5 rounded-xl">Cancelar</button>
+            <button @click="submit" class="bg-none font-raleway font-bold text-tapOrange border border-tapOrange px-5 py-1.5 rounded-xl">Deletar</button>
+        </div>
+    </div>
+</template>

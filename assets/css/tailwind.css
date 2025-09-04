@@ -4,3 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    @apply scroll-smooth
+}
+
+.input_style {
+    @apply bg-zinc-100 border border-neutral-300 pl-5 py-2 rounded-xl placeholder:font-raleway placeholder:text-sm placeholder:text-neutral-400 outline-tapOrange
+}

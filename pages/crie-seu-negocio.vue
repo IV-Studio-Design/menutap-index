@@ -27,7 +27,7 @@
                     },
                     shop: {
                         name: shop_name.value,
-                        url_name: shop_name.value.replace(/\s/g,'') + `${Math.floor(Math.random() * 10000)}`
+                        url_name: shop_name.value.replace(/\s/g,'').toLocaleLowerCase()
                     } 
                 }
             })
@@ -39,7 +39,6 @@
             errorMessage.value = error
         }
     }
-
 </script>
 
 <template>
