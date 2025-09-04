@@ -14,7 +14,7 @@
     "@aws-sdk/s3-request-presigner": "^3.717.0",
     "@nuxtjs/tailwindcss": "6.14.0",
     "@pinia/nuxt": "^0.11.2",
-    "@prisma/client": "^6.2.1",
+    "@prisma/client": "^6.15.0",
     "@types/bcrypt": "^5.0.2",
     "animate.css": "^4.1.1",
     "bcrypt": "^5.1.1",
@@ -28,6 +28,6 @@
   },
   "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
   "devDependencies": {
-    "prisma": "^6.2.1"
+    "prisma": "^6.15.0"
   }
 }
