@@ -13,7 +13,6 @@
     const imageFile = ref();
 
     const product = ref<ProductProps>({
-        id: undefined,
         name: '',
         description: '',
         price: 0,
@@ -35,7 +34,6 @@
         const formData = new FormData()
 
         formData.append('image', imageFile.value ? imageFile.value : undefined)
-        formData.append('id', info.value.id as any)
         formData.append('name', isNewValue(product.value.name, info.value.name) as any)
         formData.append('description', isNewValue(product.value.description, info.value.description) as any)
         formData.append('price', isNewValue(product.value.price, info.value.price) as any)
@@ -51,7 +49,7 @@
         // }
 
         try{
-            const { message, productUpdated } = await $fetch('/api/products', {
+            const { message, productUpdated } = await $fetch(`/api/products/${info.value.id}`, {
                 method: 'PUT',
                 body: formData
             });

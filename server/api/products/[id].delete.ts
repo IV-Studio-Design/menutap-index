@@ -7,9 +7,9 @@ const s3 = new S3Client({
 
 export default defineEventHandler(async (event) => {
     const { user } = await requireUserSession(event);
-    const { product_id } = await readBody(event);
+    const productId = getRouterParam(event, 'id');
     
-    const deletedProduct = await deleteProduct(product_id, user.shopId);
+    const deletedProduct = await deleteProduct(Number(productId), user.shopId);
 
     if(!deletedProduct){
         throw createError({

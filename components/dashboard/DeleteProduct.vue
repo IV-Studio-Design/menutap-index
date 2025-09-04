@@ -6,11 +6,8 @@
 
     const submit = async () => {
         try {
-            const { message } = await $fetch('/api/products', {
-                method: 'DELETE',
-                body: {
-                    product_id: productInfo.id
-                }
+            const { message } = await $fetch(`/api/products/${productInfo.id}`, {
+                method: 'DELETE'
             });
             emit('systemUpdate', {sucess: true, message});
             deleteProduct(productInfo.id)

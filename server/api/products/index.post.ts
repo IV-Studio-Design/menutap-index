@@ -4,7 +4,7 @@ import { ProductProps } from "~/types/ProductProps";
 
 import { v4 as uuidv4 } from 'uuid';
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
-import { getImageUrl } from "../utils/getImageUrl";
+import { getImageUrl } from "@/server/utils/getImageUrl";
 
 const s3 = new S3Client({
     region: process.env.BUCKET_REGION

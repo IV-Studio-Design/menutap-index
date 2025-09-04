@@ -1,6 +1,4 @@
 <script setup lang="ts">
-    import { formatter } from '~/Utils/formatter';
-
     const { product } = defineProps(['product']);
     const emit = defineEmits(['systemUpdate', 'deleteProduct', 'updateProduct']);
 
@@ -9,7 +7,6 @@
     async function productVisibility(){
         const formData = new FormData();
 
-        formData.append('id', product.id);
         formData.append('name', 'undefined')
         formData.append('image', 'undefined')
         formData.append('description', 'undefined')
@@ -18,7 +15,7 @@
         formData.append('visible', !product_visibility.value as any);
 
         try{
-            const { message } = await $fetch('/api/products', {
+            const { message } = await $fetch(`/api/products/${product.id}`, {
                 method: 'PUT',
                 body: formData
             });

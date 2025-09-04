@@ -2,7 +2,7 @@ import { readOneProduct, updateProduct } from "~/server/repository/product";
 import { ProductProps } from "~/types/ProductProps";
 
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
-import { getImageUrl } from "../utils/getImageUrl";
+import { getImageUrl } from "@/server/utils/getImageUrl";
 
 const s3 = new S3Client({
     region: process.env.BUCKET_REGION
@@ -10,9 +10,11 @@ const s3 = new S3Client({
 
 export default defineEventHandler(async (event) => {
     const { user } = await requireUserSession(event);
+    const productId = Number(getRouterParam(event, 'id'));
     const body = await readMultipartFormData(event);
 
     const product: ProductProps = {
+        id: productId,
         name: "",
         description: "",
         price: 0,

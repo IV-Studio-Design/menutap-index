@@ -1,5 +1,5 @@
-import { readProduct } from "../repository/product";
-import { getImageUrl } from "../utils/getImageUrl";
+import { readProduct } from "@/server/repository/product";
+import { getImageUrl } from "@/server/utils/getImageUrl";
 
 export default defineEventHandler(async (event) => {
     const query  = getQuery(event);
