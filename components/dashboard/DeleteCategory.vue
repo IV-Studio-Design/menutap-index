@@ -6,11 +6,8 @@
 
     const submit = async () => {
         try {
-            const { message } = await $fetch('/api/categories', {
+            const { message } = await $fetch(`/api/categories/${category.id}`, {
                 method: 'DELETE',
-                body: {
-                    category_id: category.id
-                }
             });
 
             deleteCategory(category.id);

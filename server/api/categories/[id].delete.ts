@@ -2,10 +2,10 @@ import { deleteCategory } from "~/server/repository/category";
 
 export default defineEventHandler(async (event) => {
     const { user } = await requireUserSession(event);
-    const { category_id } = await readBody(event);
+    const categoryId = getRouterParam(event, 'id');
 
     const categoryDeleted = await deleteCategory(
-        category_id,
+        Number(categoryId),
         user.shopId
     );
 

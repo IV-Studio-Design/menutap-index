@@ -8,10 +8,9 @@
 
     const submit = async () => {
         try {
-            const { message, categoryUpdated } = await $fetch('/api/categories', {
+            const { message, categoryUpdated } = await $fetch(`/api/categories/${category.id}`, {
                 method: 'PUT',
                 body: {
-                    category_id: category.id,
                     category_name: newCategoryName.value
                 }
             });

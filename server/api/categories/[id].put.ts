@@ -2,7 +2,8 @@ import { updateCategory } from "~/server/repository/category";
 
 export default defineEventHandler(async (event) => {
     const { user } = await requireUserSession(event);
-    const { category_name, category_id } = await readBody(event);
+    const categoryId = getRouterParam(event, 'id');
+    const { category_name } = await readBody(event);
 
     if(!category_name){
         throw createError({
@@ -14,7 +15,7 @@ export default defineEventHandler(async (event) => {
 
     const categoryUpdated = await updateCategory(
         category_name,
-        category_id,
+        Number(categoryId),
         user.shopId
     );
 
