@@ -6,3 +6,5 @@ declare module '#auth-utils' {
         shopId: number;
     }
 }
+
+export {}
