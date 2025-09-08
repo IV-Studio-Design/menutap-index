@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
 @import 'animate.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+    --font-raleway: 'Raleway', sans-serif;
+
+    --color-tapOrange: #F5831E;
+    --color-tapOrangeLight: #F8A931;
+    --color-tapGray: #F5F5F5;
+    --color-tapModalGray: #f9f9f9;
+    
+    --shadow-header: 0px 10px 15px rgba(0, 0, 0, .05);
+}
 
 html {
     @apply scroll-smooth
