@@ -33,9 +33,10 @@
             })
             if(response?.sucess) {
                 sucessMessage.value = response.message
+                navigateTo('/dashboard');
             }
         }catch(err: any){
-            const { error } = err.data
+            const { error } = err.data.error
             errorMessage.value = error
         }
     }
