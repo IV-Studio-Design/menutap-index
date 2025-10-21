@@ -69,6 +69,6 @@
         </form>
         <p class="text-white font-raleway text-xs mt-3">
             Ainda não possui uma conta?
-            <NuxtLink class="underline hover:text-neutral-200 transition-all">Cadastre-se</NuxtLink></p>
+            <NuxtLink to="/crie-seu-negocio" class="underline hover:text-neutral-200 transition-all">Cadastre-se</NuxtLink></p>
     </div>    
 </template>
