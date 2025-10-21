@@ -17,16 +17,16 @@
     const to_consume = ref<boolean|null|undefined>();
     const show_address = ref<boolean|null|undefined>()
 
-    const shopFetched = await useFetch(`/api/${window.location.host.split('.')[0]}`);
-    const shop = computed(() => shopFetched.data.value?.shop);
+    // const shopFetched = await useFetch(`/api/${window.location.host.split('.')[0]}`);
+    // const shop = computed(() => shopFetched.data.value?.shop);
 
-    shop_url.value = shop.value?.url_name;
-    shop_name.value = shop.value?.name;
-    phone_number.value = Number(shop.value?.phone_number);
-    to_delivery.value = shop.value?.to_delivery;
-    to_pickup.value = shop.value?.to_pickup;
-    to_consume.value = shop.value?.to_consume;
-    show_address.value = shop.value?.show_address;
+    // shop_url.value = shop.value?.url_name;
+    // shop_name.value = shop.value?.name;
+    // phone_number.value = Number(shop.value?.phone_number);
+    // to_delivery.value = shop.value?.to_delivery;
+    // to_pickup.value = shop.value?.to_pickup;
+    // to_consume.value = shop.value?.to_consume;
+    // show_address.value = shop.value?.show_address;
 
     const weekdays = [
         "Segunda",
