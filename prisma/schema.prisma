@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,67 +8,66 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  email String @unique
-  name String
-  password String
-  shops Shop[] @relation("UserShops")
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
   createdAt DateTime @default(now())
+  shops     Shop[]   @relation("UserShops")
 }
 
 model Shop {
-  id Int @id @default(autoincrement())
-  name String
-  description String?
-  url_name String @unique
+  id           Int        @id @default(autoincrement())
+  name         String
+  description  String?
+  url_name     String     @unique
   brand_colors String?
-  categories Category[] @relation("ShopCategories")
   waiting_time String?
-  profile_pic String?
-  banner_pic String?
+  profile_pic  String?
+  banner_pic   String?
   phone_number String?
   social_media String[]
-  to_delivery Boolean? @default(false)
-  to_pickup Boolean? @default(false)
-  to_consume Boolean? @default(false)
+  to_delivery  Boolean?   @default(false)
+  to_pickup    Boolean?   @default(false)
+  to_consume   Boolean?   @default(false)
   show_address Boolean?
-  products Product[]  @relation("ShopProducts")
-  address Address[] @relation("ShopAddress")
-  userId Int
-  user User  @relation("UserShops", fields: [userId], references: [id], onDelete: Cascade)
+  userId       Int
+  address      Address[]  @relation("ShopAddress")
+  categories   Category[] @relation("ShopCategories")
+  products     Product[]  @relation("ShopProducts")
+  user         User       @relation("UserShops", fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Product {
-  id Int @id @default(autoincrement())
-  name String
+  id          Int      @id @default(autoincrement())
+  name        String
   description String
-  price Float
-  image String @default("default_product_image.png")
-  visible Boolean @default(true)
-  categoryId Int
-  category Category @relation(fields: [categoryId], references: [id])
-  shopId Int
-  shop Shop @relation("ShopProducts", fields: [shopId], references: [id], onDelete: Cascade)
+  price       Float
+  image       String   @default("default_product_image.png")
+  visible     Boolean  @default(true)
+  categoryId  Int
+  shopId      Int
+  category    Category @relation(fields: [categoryId], references: [id])
+  shop        Shop     @relation("ShopProducts", fields: [shopId], references: [id], onDelete: Cascade)
 }
 
 model Category {
-  id Int @id @default(autoincrement())
-  name String
-  shopId Int
-  shop Shop @relation("ShopCategories", fields: [shopId], references: [id], onDelete: Cascade)
-  products Product[] 
+  id       Int       @id @default(autoincrement())
+  name     String
+  shopId   Int
+  shop     Shop      @relation("ShopCategories", fields: [shopId], references: [id], onDelete: Cascade)
+  products Product[]
 }
 
 model Address {
-  id Int @id @default(autoincrement())
-  street String
-  number Boolean
-  district String
-  city String
-  state String
+  id         Int     @id @default(autoincrement())
+  street     String
+  number     Boolean
+  district   String
+  city       String
+  state      String
   postalCode String
   complement String
-  shopId Int
-  shops Shop @relation("ShopAddress", fields: [shopId], references: [id], onDelete: Cascade)
+  shopId     Int
+  shops      Shop    @relation("ShopAddress", fields: [shopId], references: [id], onDelete: Cascade)
 }
-
