@@ -13,6 +13,8 @@ export default defineNuxtConfig({
     ],
   },
   primevue: {
-    unstyled: true
+    options: {
+      unstyled: true
+    }
   }
 })
