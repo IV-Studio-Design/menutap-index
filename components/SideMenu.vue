@@ -33,6 +33,8 @@
 </template>
 
 <style scoped>
+    @reference '@/assets/css/tailwind.css';
+
     .free-version-link {
         @apply font-bold text-tapOrange border-2 border-tapOrange rounded-md px-5 py-2
     }

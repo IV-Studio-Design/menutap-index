@@ -113,6 +113,8 @@
 </template>
 
 <style scoped>
+    @reference '@/assets/css/tailwind.css';
+
     .tree-menu-link {
         @apply w-full font-raleway font-light text-[13px] text-white px-2 py-1 rounded-xl transition-all
     }

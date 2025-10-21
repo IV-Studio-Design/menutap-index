@@ -35,6 +35,8 @@
 </template>
 
 <style scoped>
+    @reference '@/assets/css/tailwind.css';
+
     .accordion {
         @apply w-full max-w-6xl bg-neutral-100 border rounded-xl transition-all duration-300
     }

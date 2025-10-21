@@ -191,6 +191,8 @@
 </template>
 
 <style scoped>
+    @reference '@/assets/css/tailwind.css';
+
     .order-amount {
         @apply w-6 h-6 absolute pb-0.5 -top-2 -left-2 rounded-full border-[3px] border-white
     }
