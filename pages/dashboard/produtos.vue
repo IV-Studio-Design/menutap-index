@@ -22,8 +22,8 @@
     const showDeleteProduct = ref<boolean>(false);
     const productInfo = ref();
 
-    fetchCategories(user.value.shopId)
-    fetchProducts(user.value.shopId)
+    fetchCategories(user.value!.shopId)
+    fetchProducts(user.value!.shopId)
 
     const systemUpdate = (e: SysMsgProps) => {
         if(e.sucess){
