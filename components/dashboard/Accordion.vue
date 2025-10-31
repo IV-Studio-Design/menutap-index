@@ -28,7 +28,7 @@
             </div>
         </button>
         
-        <div ref="content" :class="showContent ? `opacity-1 content `: 'opacity-0 content'">
+        <div ref="content" :class="showContent ? `opacity-100 content `: 'opacity-0 content'">
             <slot />
         </div>
     </div>
@@ -38,7 +38,7 @@
     @reference '@/assets/css/tailwind.css';
 
     .accordion {
-        @apply w-full max-w-6xl bg-neutral-100 border rounded-xl transition-all duration-300
+        @apply w-full max-w-6xl bg-neutral-100 border border-neutral-300 rounded-xl transition-all duration-300
     }
     .content {
         @apply flex justify-start items-start px-8 pb-7 transition-all duration-500
